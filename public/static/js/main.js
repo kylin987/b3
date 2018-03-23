@@ -74,7 +74,8 @@ $(function(){
 
 $(function(){
     $('#owl-demo4').owlCarousel({
-    	items:1
+    	items:1,
+		singleItem: true
     });
 });
 

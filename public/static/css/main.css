@@ -444,6 +444,8 @@ width: 3rem;}
 .tabs-bar .tabs {padding:0 1rem;}
 .tabs-bar .tabs .active {font-size: 1.6rem; font-weight: 700; height:4rem;    margin-right: 30px;}
 
+.tel {text-align:center; font-size:2.5rem; color:#666;}
+
 
 @media only screen and (max-width: 50em) {
 	.brand-box h2{ font-size: 1.5rem; font-weight: 400;}

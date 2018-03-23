@@ -5,4 +5,4 @@ $config['siteurl']='http://www.abc.com';
 $config['keywords']='赵云';
 $config['description']='赵云';
 $config['masteremail']='';
-$config['copyright']='版权信息';
+$config['copyright']='2018 星际无限';

@@ -37,11 +37,11 @@ $config['WATERMARK_IMAGE']='logo.png'; //水印图片
 $config['WATERMARK_CUTOUT']=true; //缩图方式
 
 //调试配置
-$config['DEBUG']=true;	//是否开启调试模式，true开启，false关闭
-$config['ERROR_HANDLE']=true;//是否启动CP内置的错误处理，如果开启了xdebug，建议设置为false
+$config['DEBUG']=false;	//是否开启调试模式，true开启，false关闭
+$config['ERROR_HANDLE']=false;//是否启动CP内置的错误处理，如果开启了xdebug，建议设置为false
 
 //伪静态
-$config['URL_REWRITE_ON']=false;//是否开启重写，true开启重写,false关闭重写
+$config['URL_REWRITE_ON']=true;//是否开启重写，true开启重写,false关闭重写
 $config['URL_MODULE_DEPR']='/';//模块分隔符
 $config['URL_ACTION_DEPR']='/';//操作分隔符
 $config['URL_PARAM_DEPR']='-';//参数分隔符
