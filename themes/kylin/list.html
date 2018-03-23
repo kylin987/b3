@@ -1,0 +1,31 @@
+<!--#include file="resou.html"-->
+<body>
+	<!--#include file="head.html"-->
+	<!--#include file="ad.html"-->
+	
+	
+	<section class="container page clearfix">
+		<div class="page-tit wow fadeInUp">{$info.name}</div>
+		<div class="new-list wow fadeInUp" data-wow-delay=".3s">
+			<ul>
+				<!--foreach:{$loop $vo}-->
+				<li>
+					<span>
+						<strong>{$vo.updatetime time="d"}</strong>
+						{$vo.updatetime time="Y/m"}
+					</span>
+					<a href="{$vo.aurl}" target="_blank" >{$vo.titlex}</a>
+					<p>{$vo.description len="150"}...</p>
+				</li>				
+				<!--/loop-->
+			</ul>
+		</div>
+		<div class="clearfloat"></div>
+		<div class="m-page wow fadeInUp" data-wow-delay=".3s">
+			{$page}
+		</div>
+	</section>
+	<!--#include file="footer.html"-->
+	<!--#include file="script.html"-->
+</body>
+</html>

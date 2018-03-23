@@ -1,0 +1,76 @@
+html, body { font-size: 100%; margin: 0; padding: 0; background-image: url(../images/body-bg.png) }
+a { color: #333; }
+a:hover { color: #06C; text-decoration: none }
+img { width: 100%; border-radius: 5px; }
+ul, li { list-style: none; }
+/*公共模块*/
+.box { background-color: #fff; border: 1px solid #ccc; margin: 10px; border-radius: 5px; }
+.box .title { font-size: 100%; font-weight: bold; border-bottom: 1px solid #ccc; padding: 10px; color: #3e4e68; font-weight: bold }
+.box .title h2 { font-size: 100%; font-weight: bold }
+.box .content { padding: 10px; line-height: 150%; }
+.box .info { padding: 10px; font-size: 70%; line-height: 150%; color: #999 }
+.box .list { }
+.box .list li { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #CCCCCC; }
+.box .list li a { padding-top: 5px; padding-bottom: 5px; padding-left: 10px; padding-right: 10px; line-height: 150%; display: block; }
+.box .list li a:hover { background-color: #eeeeee }
+.box .pic-list { padding: 10px; -moz-column-count: 2; -webkit-column-count: 2; column-count: 2; overflow: hidden }
+.box .pic-list li { text-align: center; border-radius: 5px; background: #ddd; border::#CCC 1px solid;
+margin-bottom: 10px; padding-top: 10px; display: inline-block; width: 100%; }
+.box .pic-list li .pic { padding-left: 10px; padding-right: 10px; }
+.box .pic-list li .pic img { }
+.box .pic-list li .title { font-size: 70%; line-height: 200%; padding: 10px; }
+/*头部*/
+#header { padding: 10px; padding-top: 20px; padding-bottom: 15px; }
+#header .logo h1 { font-size: 150%; font-weight: bold }
+#header .logo a { width: 100%; display: block; }
+#header .logo a:hover { color: #333 }
+#header .logo a span { font-size: 70%; padding-left: 10px; color: #666 }
+/*导航*/
+#nav { background-color: #3e4e68; height: 40px; line-height: 40px; padding-left: 10px; padding-right: 10px; }
+#nav .list { position: absolute; right: 50px; left: 0px; color: #fff; overflow: hidden; height: 40px; }
+#nav .list ul { }
+#nav .list ul li { float: left; }
+#nav .list ul li a { color: #fff; padding-left: 15px; padding-right: 15px; display: block; height: 40px; }
+#nav .list ul li a:hover { background-color: #475a79; }
+#nav .more { position: absolute; width: 50px; right: 0px; }
+#nav .more a { color: #fff; }
+/*banner*/
+#banner { margin-left: 10px; margin-right: 10px; margin-top: 10px; min-hight: 150px; max-height: 200px; overflow: hidden; position: relative; border-radius: 5px; }
+#banner img { border-radius: 0 }
+#banner div { display: block; text-align: center; }
+#banner .swipe { overflow: hidden; position: relative; }
+#banner .swipe > div { width: 100%; float: left; position: relative; }
+/*联系*/
+#footer { padding: 20px; text-align: center; line-height: 150%; color: #666; font-size: 80% }
+/*分页*/
+.pages { padding: 10px; }
+.pages .pre-page, .pages .next-page { margin-top:10px; }
+.pages .pre-page a, .pages .next-page a { display: block; line-height: 200%; text-decoration: none; font-size:120%; text-align:center; color: #555; border: 1px solid #dedede; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; cursor: pointer; background: #f5f5f5; background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#f0f0f0)); background: -moz-linear-gradient(top, #f9f9f9, #f0f0f0); border-color: #dedede #d8d8d8 #d3d3d3; color: #555; text-shadow: 0 1px 0 #fff; -webkit-box-shadow: 0 1px 1px #eaeaea, inset 0 1px 0 #fbfbfb; -moz-box-shadow: 0 1px 1px #eaeaea, inset 0 1px 0 #fbfbfb; box-shadow: 0 1px 1px #eaeaea, inset 0 1px 0 #fbfbfb; }
+.pages .pre-page a:hover, .pages .next-page a:hover { background: #f4f4f4; background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#f8f8f8)); background: -moz-linear-gradient(top, #efefef, #f8f8f8); border-color: #c7c7c7 #c3c3c3 #bebebe; text-shadow: 0 1px 0 #fdfdfd; -webkit-box-shadow: 0 1px 1px #ebebeb, inset 0 1px 0 #f3f3f3; -moz-box-shadow: 0 1px 1px #ebebeb, inset 0 1px 0 #f3f3f3; box-shadow: 0 1px 1px #ebebeb, inset 0 1px 0 #f3f3f3; }
+/*边栏*/
+.sidr { display: none; position: absolute; position: fixed; top: 0; height: 100%; z-index: 999999; width: 200px; overflow-x: none; overflow-y: auto; font-size: 15px; background: #333; color: #fff; -webkit-box-shadow: inset 0 0 5px 5px #222; -moz-box-shadow: inset 0 0 5px 5px #222; box-shadow: inset 0 0 5px 5px #222 }
+.sidr .sidr-inner { padding: 0 0 15px }
+.sidr .sidr-inner>p { margin-left: 15px; margin-right: 15px }
+.sidr.right { left: auto; right: -260px }
+.sidr.left { left: -260px; right: auto }
+.sidr h1, .sidr h2, .sidr h3, .sidr h4, .sidr h5, .sidr h6 { font-size: 11px; font-weight: normal; padding: 0 15px; margin: 0 0 5px; color: #fff; line-height: 24px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4d4d4d), color-stop(100%, #1a1a1a)); background-image: -webkit-linear-gradient(#4d4d4d, #1a1a1a); background-image: -moz-linear-gradient(#4d4d4d, #1a1a1a); background-image: -o-linear-gradient(#4d4d4d, #1a1a1a); background-image: linear-gradient(#4d4d4d, #1a1a1a); -webkit-box-shadow: 0 5px 5px 3px rgba(0,0,0,0.2); -moz-box-shadow: 0 5px 5px 3px rgba(0,0,0,0.2); box-shadow: 0 5px 5px 3px rgba(0,0,0,0.2) }
+.sidr p { font-size: 13px; margin: 0 0 12px }
+.sidr p a { color: rgba(255,255,255,0.9) }
+.sidr>p { margin-left: 15px; margin-right: 15px }
+.sidr ul { display: block; margin: 0 0 15px; padding: 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #4d4d4d }
+.sidr ul li { display: block; margin: 0; line-height: 40px; border-top: 1px solid #4d4d4d; border-bottom: 1px solid #1a1a1a }
+.sidr ul li:hover, .sidr ul li.active, .sidr ul li.sidr-class-active { border-top: none; line-height: 41px }
+.sidr ul li:hover>a, .sidr ul li:hover>span, .sidr ul li.active>a, .sidr ul li.active>span, .sidr ul li.sidr-class-active>a, .sidr ul li.sidr-class-active>span { background-color: #222 }
+.sidr ul li a, .sidr ul li span { padding: 0 15px; display: block; text-decoration: none; color: #ddd }
+.sidr ul li ul { border-bottom: none; margin: 0 }
+.sidr ul li ul li { line-height: 30px; font-size: 13px }
+.sidr ul li ul li:last-child { border-bottom: none }
+.sidr ul li ul li:hover, .sidr ul li ul li.active, .sidr ul li ul li.sidr-class-active { border-top: none; line-height: 31px }
+.sidr ul li ul li:hover>a, .sidr ul li ul li:hover>span, .sidr ul li ul li.active>a, .sidr ul li ul li.active>span, .sidr ul li ul li.sidr-class-active>a, .sidr ul li ul li.sidr-class-active>span { -webkit-box-shadow: inset 0 0 15px 3px #222; -moz-box-shadow: inset 0 0 15px 3px #222; box-shadow: inset 0 0 15px 3px #222 }
+.sidr ul li ul li a, .sidr ul li ul li span { color: rgba(255,255,255,0.8); padding-left: 30px }
+.sidr form { margin: 0 15px }
+.sidr label { font-size: 13px }
+.sidr input[type="text"], .sidr input[type="password"], .sidr input[type="date"], .sidr input[type="datetime"], .sidr input[type="email"], .sidr input[type="number"], .sidr input[type="search"], .sidr input[type="tel"], .sidr input[type="time"], .sidr input[type="url"], .sidr textarea, .sidr select { width: 100%; font-size: 13px; padding: 5px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0 0 10px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; border: none; background: rgba(0,0,0,0.1); color: rgba(255,255,255,0.6); display: block; clear: both }
+.sidr input[type=checkbox] { width: auto; display: inline; clear: none }
+.sidr input[type=button], .sidr input[type=submit] { color: #333; background: #fff }
+.sidr input[type=button]:hover, .sidr input[type=submit]:hover { background: rgba(255,255,255,0.9) }

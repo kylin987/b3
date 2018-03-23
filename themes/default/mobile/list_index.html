@@ -1,0 +1,45 @@
+<!--#include file="head.html"-->
+<div id="nav">
+  <div class="list">
+    <ul>
+    <li><a href="javascript:history.back(-1)">返回</a></li>
+    <!--list:{table="category" pid="<$info.cid>" order="cid desc" limit="5"}-->
+    <li><a href="{$list.curl}">{$list.name}</a></li>
+    <!--/list-->
+    </ul>
+  </div>
+  <div class="more"><a id="sidr-main" href="#sidr">导航</a></div>
+</div>
+<div class="fn-clear"></div>
+<!--list:{table="category" att="list" order="cid asc" pid="<$top_category.cid>"}-->
+<div class="box">
+	<div class="title"><h2><a href="{$list.curl}" title="{$list.name}">{$list.name}</a></h2></div>
+  <div class="list">
+  	<ul>
+    	<!--content:{table="content" cid="<$list.cid>" order="updatetime desc" limit="10"}-->
+    	<li><a href="{$content.aurl}" title="{$content.title}">{$content.title}</a></li>
+        <!--/content-->
+    </ul>
+  </div>
+</div>
+<!--/list--> 
+<div id="sidr">
+  <ul>
+    <li><a href="javascript:;" onClick="$.sidr('close', 'sidr');">关闭导航</a></li>
+   	<li><a href="{$parent_categoty.curl}">返回上一级</a></li>
+    <!--根据当前栏目ID调用下级栏目-->
+    <!--list:{table="category" pid="<$info.cid>" order="cid desc" limit="5"}-->
+    <li><a href="{$list.curl}">{$list.name}</a></li>
+    <!--/list-->
+  </ul>
+<!--#include file="srarch_bar.html"-->
+</div>
+<!--#include file="foot.html"-->
+<script>
+$(document).ready(function() {
+  $('#banner').Swipe({auto: 5000});
+});
+</script>
+
+</body>
+</html>

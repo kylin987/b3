@@ -1,0 +1,47 @@
+/************
+ * 页面样式
+ ************/
+.what {padding:6rem 0;}
+.notes {display:block; box-shadow:1px 1px 20px 0 #e8e8e8; padding:2rem; margin-bottom:2rem;}
+.left-part {float:left; width:48%;border:1px #e8e8e8 solid; padding:3rem;}
+.left-part h3 {color:#333; margin-bottom:2rem;}
+.left-part ul li {list-style:outside none disc; font-size:0.85rem; margin-bottom:1.5rem; color:#666;}
+.right-part {width:48%; float:right; padding:2rem 3rem 0;}
+.right-part .right-item {margin:0.2rem 0 2rem;}
+.right-part .right-item h4 {margin:0;}
+.right-part .right-item .en {font-size:2.2rem; color:#c9c9c9; line-height:3rem;}
+.right-part .right-item p {font-size:0.85rem;}
+a.rules,a.process,a.contact{background: linear-gradient(180deg, #479ea2, #1e858a) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+width: 180px;}
+a.rules:hover,a.process:hover,a.contact:hover {opacity:0.9;color: #fff;}
+
+
+.how {background:#fafafa; padding:7rem 0; text-align:center;}
+.how-item-box {display:block; padding:4rem 4rem 2rem;}
+.how-item {float:left; margin: 0 0.8rem; max-width: 16rem; overflow: hidden;   padding: 3rem;}
+.how-item .step {font-size:3.5rem; color:#e8e8e8;}
+.how-item p {font-size:0.8rem; color:#666;}
+
+.scene {padding:3rem 5rem; text-align:center;}
+.scene h3 {line-height:6rem;}
+.scene-img {padding-bottom:2rem;}
+.scene-img img {padding:1rem;}
+
+
+
+
+
+
+
+
+
+
+
+

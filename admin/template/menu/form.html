@@ -1,0 +1,26 @@
+<div class="title"><a href="javascript:void(0)">多用表单</a></div>
+    <ul class="load menu">
+      <?php if(model('user_group')->model_power('form','visit')){ ?>
+      <li><a href="__APP__/form/index">表单设置</a></li>
+      <?php } ?>
+      <!--foreach:{$list $vo}-->
+      <li><a href="__APP__/form_list/index/id-{$vo.id}">{$vo.name}</a></li>
+      <!--{/foreach}-->
+      <!--hook-->
+	  <?php module('common')->plus_hook('menu','form_list_tpl');  ?>
+	  <!--hook end-->
+    </ul>
+    <!--hook-->
+	 <?php module('common')->plus_hook('menu','form_tpl');  ?>
+	 <!--hook end-->
+    
+<script>
+<?php if($_GET['load']<>1){ ?>
+url=$(".load li:first a").attr("href");
+if(!url||url=='#'){
+	ajaxload('__APP__/menu/error');
+}else{
+	ajaxload(url);
+}
+<?php } ?>
+</script>

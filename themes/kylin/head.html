@@ -1,0 +1,50 @@
+<nav class="navbar">
+		<div class="container">
+			<h1 class="pull-left logo">
+				<img src="/public/static/img/logo.png" />
+			</h1>
+			<ul class="nav">
+				<!--判断主导航高亮--> 
+				<!--if:{$top_category['cid']==''}-->
+				<li class="current"> 
+				<!--{else}-->
+				<li> 
+				<!--{/if}-->
+                <a href="/">首页</a></li>
+                <!--list:{table="category" type="top" order="cid asc" limit="7"}-->
+                <!--判断循环内导航高亮-->
+				<!--if:{$top_category['cid']==$list['cid']}-->
+				<li class="current"> 
+				<!--{else}-->
+				<li> 
+				<!--{/if}-->
+				<a href="{$list.curl}" >{$list.name}</a></li>
+				<!--/list-->
+			</ul>
+			<div class="nav-logo" id="left-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>			
+	</nav>
+	<div class="mobile-nav" id="sidr-left">
+		<ul>
+			<!--判断主导航高亮--> 
+			<!--if:{$top_category['cid']==''}-->
+			<li class="current"> 
+			<!--{else}-->
+			<li> 
+			<!--{/if}-->
+			<a href="/">首页</a></li>
+			<!--list:{table="category" type="top" order="cid asc" limit="7"}-->
+			<!--判断循环内导航高亮-->
+			<!--if:{$top_category['cid']==$list['cid']}-->
+			<li class="current"> 
+			<!--{else}-->
+			<li> 
+			<!--{/if}-->
+			<a href="{$list.curl}" >{$list.name}</a></li>
+			<!--/list-->
+		</ul>
+	</div>

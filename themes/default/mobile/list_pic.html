@@ -1,0 +1,56 @@
+<!--#include file="head.html"-->
+<div id="nav">
+  <div class="list">
+    <ul>
+    <li><a href="javascript:history.back(-1)">返回</a></li>
+    <!--根据顶级栏目ID调用下级栏目-->
+    <!--list:{table="category" pid="<$top_category.cid>" order="cid desc" limit="5"}-->
+		<li><a href="{$list.curl}">{$list.name}</a></li>
+    <!--/list-->
+    </ul>
+  </div>
+  <div class="more"><a id="sidr-main" href="#sidr">导航</a></div>
+</div>
+<div class="fn-clear"></div>
+<div class="box">
+	<div class="title"><h2>{$info.name}</h2></div>
+    <div class="pic-list">
+  	<ul>
+     <!--foreach:{$loop $list}-->
+    	<li>
+        	<div class="pic"><a href="{$list.aurl}"><img src="{$list.image cutout='500,300}" alt="{$list.title}"></a></div>
+            <div class="titlle"><a href="{$list.aurl}" title="{$list.title}">{$list.title len="12"}</a></div>
+        </li>
+    <!--/loop-->
+    </ul>
+    <div class="fn-clear"></div>
+  </div>
+  <div class="pages"> 
+    <!--if:{!empty($prepage)}-->
+    <div class="pre-page"><a href="{$prepage}">上一页</a></div>
+    <!--/if--> 
+    <!--if:{!empty($nextpage)}-->
+    <div class="next-page"><a href="{$nextpage}">下一页</a></div>
+    <!--/if--> 
+  </div>
+</div>
+<div id="sidr">
+  <ul>
+    <li><a href="javascript:;" onClick="$.sidr('close', 'sidr');">关闭导航</a></li>
+   	<li><a href="{$parent_categoty.curl}">返回上一级</a></li>
+    <!--根据顶级栏目ID调用下级栏目-->
+    <!--list:{table="category" pid="<$top_category.cid>" order="cid desc" limit="5"}-->
+		<li><a href="{$list.curl}">{$list.name}</a></li>
+    <!--/list-->
+  </ul>
+<!--#include file="srarch_bar.html"-->
+</div>
+<!--#include file="foot.html"-->
+<script>
+$(document).ready(function() {
+  $('#banner').Swipe({auto: 5000});
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<div class="guestbook"> 
+  <!--foreach:{$loop $list}-->
+  <div class="list">
+    <div class="content"> {$list.content html} 
+      <!--if:{!empty($list['reply'])}-->
+      <div class="reply">管理员回复：{$list.reply}</div>
+      <!--/if--> 
+    </div>
+    <div class="info">邮箱:{$list.email} &nbsp;&nbsp;昵称:{$list.name}&nbsp;&nbsp;时间:{$list.time time="Y-m-d H:i:s"}</div>
+  </div>
+  <!--/loop-->
+  <div class="pagenum">
+    {$page}
+    </div>
+  <div class="formsub">
+    <form action="__INDEX__/form/post" method="post">
+      <h5>发布留言</h5>
+      <div class="guest_post">
+        <div class="guest_post_hr"> 昵称：
+          <input name="name" type="text" class="guest_post_text" id="name" value="">
+        </div>
+        <div class="guest_post_hr"> 邮箱：
+          <input class="guest_post_text" name="email" type="text" id="email">
+        </div>
+        <textarea name="content" cols="" rows="" class="guest_post_content" id="content"></textarea>
+        <div class="subdiv"> <img src="__APP__/form/verify" alt="如果您无法识别验证码，请点图片更换" width="50" height="25" border="0" align="top" id="verifyImg" style="margin-left:3px;" onClick="fleshVerify()"/>&nbsp;
+          <input style="width:50px;" name="checkcode" type="text" class="guest_post_text" id="checkcode">
+          <input name="time" type="hidden" id="time" value="<?php echo date('Y-m-d H:i:s') ?>">
+          <input name="form" type="hidden" value="guestbook">
+          <input name="test_value" type="hidden" value="">
+          <input type="submit" class="button"  value="提交">
+        </div>
+        <div style="clear:both"></div>
+      </div>
+    </form>
+  </div>
+</div>
+<script>
+fleshVerify();
+function fleshVerify()
+{
+var timenow = new Date().getTime();
+document.getElementById('verifyImg').src= '__APP__/form/verify?'+timenow;
+}
+</script>

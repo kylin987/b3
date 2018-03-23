@@ -1,0 +1,38 @@
+<!--#include file="head.html"-->
+<div id="nav">
+  <div class="list">
+    <ul>
+    <li><a href="__INDEX__/">网站首页</a></li>
+      <!--list:{table="category" type="top" order="cid asc" limit="7"}-->
+      <li><a href="{$list.curl}">{$list.name}</a></li>
+      <!--/list-->
+    </ul>
+  </div>
+  <div class="more"><a id="sidr-main" href="#sidr">导航</a></div>
+</div>
+<div class="fn-clear"></div>
+<div class="box">
+  <div class="title"><h2>404页面不存在</h2></div>
+  <div class="content">
+  您要访问的页面已经丢失，请<a href="__INDEX__/">返回首页</a> </div>
+  <div class="pages">{$page}</div>
+</div>
+<div id="sidr">
+  <ul>
+    <li><a href="javascript:;" onClick="$.sidr('close', 'sidr');">关闭导航</a></li>
+   	<li><a href="__INDEX__/">网站首页</a></li>
+      <!--list:{table="category" type="top" order="cid asc" limit="7"}-->
+      <li><a href="{$list.curl}">{$list.name}</a></li>
+      <!--/list-->
+  </ul>
+<!--#include file="srarch_bar.html"-->
+</div>
+<!--#include file="foot.html"-->
+<script>
+$(document).ready(function() {
+  $('#banner').Swipe({auto: 5000});
+});
+</script>
+
+</body>
+</html>

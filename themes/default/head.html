@@ -1,0 +1,65 @@
+<div id="head">
+  <div class="warp"> 
+    <!--LOGO-->
+    <div id="logo" class="fn-left">
+      <h1><a href="__INDEX__/">{$sys.sitename}</a></h1>
+    </div>
+    <!--END--> 
+    <!--搜索-->
+    <div id="search" class="fn-right">
+      <form  action="__INDEX__/search" method="get">
+        <span class="select">
+        <select  name="model">
+          <option value="0">标题</option>
+          <option value="1">标题和描述</option>
+          <option value="2">全文</option>
+        </select>
+        </span>
+        <input name="keyword" type="text" id="keyword" />
+        <button type="submit">搜索</button>
+      </form>
+    </div>
+    <!--END-->
+    <div class="fn-clear"></div>
+  </div>
+  <!--导航条-->
+  <div id="nav">
+    <div class="warp">
+      <ul>
+        <!--判断主导航高亮--> 
+        <!--if:{$top_category['cid']==''}-->
+        <li class="current"> 
+        <!--{else}-->
+        <li> 
+        <!--{/if}-->
+          <div class="title"><a href="__INDEX__/">网站首页</a></div>
+        </li>
+        <!--list:{table="category" type="top" order="cid asc" limit="7"}-->
+        <!--判断循环内导航高亮-->
+        <!--if:{$top_category['cid']==$list['cid']}-->
+        <li class="current"> 
+        <!--{else}-->
+        <li> 
+        <!--{/if}-->
+          <div class="title"><a href="{$list.curl}">{$list.name}</a></div>
+          <!--if:{$top_category['cid']==$list['cid']}-->
+          <ul class="nav_menu menucur">
+          <!--{else}-->
+          <ul class="nav_menu">
+          <!--{/if}--> 
+            <!--sublist:{table="category" pid="<$list.cid>" order="cid asc" limit="5"}-->
+            <li><a href="{$sublist.curl}">{$sublist.name}</a></li>
+            <li class="line">|</li>
+            <!--/sublist-->
+          </ul>
+        </li>
+        <!--/list-->
+        <li> <div class="title"><a href="{$guestbook.form}">留言板</a> </div></li>
+      </ul>
+      <div class="fn-clear"></div>
+    </div>
+  </div>
+  <div class="fn-clear"></div>
+  <div id="navmenu"> </div>
+</div>
+<div class="fn-clear"></div>

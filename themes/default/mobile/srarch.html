@@ -1,0 +1,50 @@
+<!--#include file="head.html"-->
+<div id="nav">
+  <div class="list">
+    <ul>
+    <li><a href="__INDEX__/">网站首页</a></li>
+      <!--list:{table="category" type="top" order="cid asc" limit="7"}-->
+      <li><a href="{$list.curl}">{$list.name}</a></li>
+      <!--/list-->
+    </ul>
+  </div>
+  <div class="more"><a id="sidr-main" href="#sidr">导航</a></div>
+</div>
+<div class="fn-clear"></div>
+<div class="box">
+  <div class="title"><h2>{$info.name} - 搜索</h2></div>
+  <div class="list">
+  	<ul>
+      <!--foreach:{$loop $vo}-->
+          <li> <a href="{$vo.aurl}">{$vo.titlex}</a></li>
+     <!--/loop-->
+    </ul>
+  </div>
+  <div class="pages"> 
+    <!--if:{!empty($prepage)}-->
+    <div class="pre-page"><a href="{$prepage}">上一页</a></div>
+    <!--/if--> 
+    <!--if:{!empty($nextpage)}-->
+    <div class="next-page"><a href="{$nextpage}">下一页</a></div>
+    <!--/if--> 
+  </div>
+</div>
+<div id="sidr">
+  <ul>
+    <li><a href="javascript:;" onClick="$.sidr('close', 'sidr');">关闭导航</a></li>
+   	<li><a href="__INDEX__/">网站首页</a></li>
+      <!--list:{table="category" type="top" order="cid asc" limit="7"}-->
+      <li><a href="{$list.curl}">{$list.name}</a></li>
+      <!--/list-->
+  </ul>
+<!--#include file="srarch_bar.html"-->
+</div>
+<!--#include file="foot.html"-->
+<script>
+$(document).ready(function() {
+  $('#banner').Swipe({auto: 5000});
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!--#include file="head.html"-->
+<div id="nav">
+  <div class="list">
+    <ul>
+      <li><a href="__INDEX__/">网站首页</a></li>
+      <!--list:{table="category" type="top" order="cid asc" limit="7"}-->
+      <li><a href="{$list.curl}">{$list.name}</a></li>
+      <!--/list-->
+    </ul>
+  </div>
+  <div class="more"><a id="sidr-main" href="#sidr">导航</a></div>
+</div>
+<div class="fn-clear"></div>
+<div id="banner">
+  <div class="swipe">
+  <!--list_pic:{table="content" image="true" order="updatetime desc" limit="5" }-->
+        <div><a href="{$list_pic.aurl}" title="{$list_pic.title}" ><img src="{$list_pic.image cutout='800,200'}"  alt="{$list_pic.title}" ></a></div>
+   <!--/list_pic-->
+  </div>
+</div>
+<div class="box">
+	<div class="title"><h2>自定义变量</h2></div>
+  <div class="content"> {$my.info}</div>
+</div>
+<div class="box">
+	<div class="title"><h2>最新新闻</h2></div>
+  <div class="list">
+  	<ul>
+    	<!--list:{table="content" order="updatetime desc" limit="10"}-->
+    	<li><a href="{$list.aurl}" title="{$list.title}">{$list.title}</a></li>
+        <!--/list--> 
+    </ul>
+  </div>
+</div>
+<div class="box">
+  <div class="title"><h2>图片列表</h2></div>
+  <div class="pic-list">
+  	<ul>
+    <!--list:{table="content" image="true" order="updatetime desc" limit="10"}-->
+    	<li>
+        	<div class="pic"><a href="{$list.aurl}"><img src="{$list.image cutout='500,300'}" alt="{$list.title}"></a></div>
+            <div class="titlle"><a href="{$list.aurl}" title="{$list.title}">{$list.title len="12"}</a></div>
+        </li>
+    <!--/list-->
+    </ul>
+    <div class="fn-clear"></div>
+  </div>
+</div>
+<div id="sidr">
+  <ul>
+    <li><a href="javascript:;" onClick="$.sidr('close', 'sidr');">关闭导航</a></li>
+   	<li><a href="__INDEX__/">网站首页</a></li>
+      <!--list:{table="category" type="top" order="cid asc" limit="7"}-->
+      <li><a href="{$list.curl}">{$list.name}</a></li>
+      <!--/list-->
+  </ul>
+<!--#include file="srarch_bar.html"-->
+</div>
+<!--#include file="foot.html"-->
+<script>
+$(document).ready(function() {
+  $('#banner').Swipe({auto: 5000});
+});
+</script>
+
+</body>
+</html>

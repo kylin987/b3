@@ -1,0 +1,68 @@
+<div class="page_function">
+  <div class="info">
+    <h3>管理首页</h3>
+    <small><font color="#333">欢迎使用 千康元网站管理系统</small> </font></div>
+  <div class="tip">{$user.user} [{$user.nicename}]&nbsp;&nbsp;您等当前登录时间为：{$php( echo date('Y-m-d H:i:s',$user['logintime']))}&nbsp;&nbsp;登录IP为: {$user.ip}</div>
+<!--[if lt IE 8]> 
+<div class="index_tip"><p>您正在使用IE6或IE7为了您更好的体验，请升级浏览器至IE8以上或者更换其他浏览器<a href="http://www.microsoft.com/china/windows/internet-explorer/" target="_blank">Internet Explorer 8</a> 其他浏览器: 
+<a href="http://www.mozillaonline.com/">Firefox</a> / <a href="http://www.google.com/chrome/?hl=zh-CN">Chrome</a> / <a href="http://www.apple.com.cn/safari/">Safari</a> / <a href="http://www.operachina.com/">Opera</a></p></div>
+<![endif]-->
+</div>
+<div class="page_main">
+<h3>基本信息</h3>
+  <div class="page_table table_list">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="120">程序版本: </td>
+        <td width="250">{$config.ver_name} {$config.ver}</td>
+        <td width="120">服务器时间: </td>
+        <td><?php echo date("Y-m-d G:i T",time());  ?></td>
+      </tr>
+      <tr>
+        <td width="120">当前模板: </td>
+        <td width="250">{$config_array['TPL_TEMPLATE_PATH']}</td>
+        <td width="120">伪静态: </td>
+        <td><?php if($config_array['URL_REWRITE_ON']){echo '<font color=green>已开启</font>';} else {echo '<font color=red>未开启</font>';} ?></td>
+      </tr>
+      <tr>
+        <td width="120">缓存状态: </td>
+        <td width="250">
+        <?php if($config_array['TPL_CACHE_ON']){echo '<font title="已开启" color=green>模板</font>';} else {echo '<font  title="未开启" color=red>模板</font>';} ?>
+         &nbsp;&nbsp;
+        <?php if($config_array['DB_CACHE_ON']){echo '<font title="已开启" color=green>数据</font>';} else {echo '<font  title="未开启" color=red>数据</font>';} ?>
+        &nbsp;&nbsp;
+        <?php if($config_array['HTML_CACHE_ON']){echo '<font title="已开启" color=green>静态</font>';} else {echo '<font  title="未开启" color=red>静态</font>';} ?>
+        </td>
+        <td width="120">插件数量: </td>
+        <td>{$plugin_count}</td>
+      </tr>
+      <tr>
+        <td width="120">栏目数: </td>
+        <td width="250">{$category_count}</td>
+        <td width="120">内容数: </td>
+        <td>{$content_count}</td>
+      </tr>
+      <tr>
+        <td width="120">TAG数: </td>
+        <td width="250">{$tags_count}</td>
+        <td width="120">附件数: </td>
+        <td>{$upload_count}</td>
+      </tr>      
+      
+    </table>
+  </div>
+  
+  <h3>技术支持</h3>
+  <div class="page_table  table_list">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="120">官方主页: </td>
+        <td width="250"><a href="http://www.duxcms.com" target="_blank">www.duxcms.com</a></td>
+        <td width="120">业务经理: </td>
+        <td><a href="http://bbs.duxcms.com" target="_blank">bbs.duxcms.com</a></td>
+      </tr>
+      
+     
+    </table>
+  </div>
+</div>

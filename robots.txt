@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /data/
+Disallow: /themes/
+Disallow: /system/
+Disallow: /install/
+Disallow: /public/
