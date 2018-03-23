@@ -3,10 +3,10 @@
 	<!--#include file="head.html"-->
 	<!--#include file="ad.html"-->
 	
-	
+	<div class="warp">
 	<section class="container page clearfix">
 		<div class="page-tit wow fadeInUp">选购{$info.name}</div>
-		<div class="new-list wow fadeInUp" data-wow-delay=".3s">			
+		<div class="pro-list wow fadeInUp">			
 			<!--foreach:{$loop $vo}-->
 			<div class="pro_box">
 				<div flex="main:center cross:center" class="item-hot">热销<br>产品</div>
@@ -21,7 +21,7 @@
 				<div flex="cross:center box:mean" class="button-wrap">
 					<div class="item-price">￥{$vo.price}</div>
 					<div class="item-button">
-						<a href="{$vo.aurl}" target="_blank" >立即购买</a>
+						<a href="{$vo.aurl}" target="_blank" class="buy" >立即购买</a>
 					</div>
 				</div>				
 			</div>		
@@ -32,6 +32,7 @@
 			{$page}
 		</div>
 	</section>
+	</div>
 	<!--#include file="footer.html"-->
 	<!--#include file="script.html"-->
 </body>

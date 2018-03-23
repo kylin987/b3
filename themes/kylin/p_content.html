@@ -1,0 +1,37 @@
+<!--#include file="resou.html"-->
+<body>
+	<!--#include file="head.html"-->
+	<!--#include file="ad2.html"-->
+	
+	<section class="container page clearfix">
+		<div class="p_info">
+			<div class="product-img">
+				<img src="{$info.image}">
+			</div>
+			<div class="product-brief">
+				<h1 class="p_title">{$info.title} <span>热销</span></h1>
+				<div class="desc">{$info.description}</div>
+				<div class="price"><span>价格</span>￥{$info.price}</div> 
+				<div flex="cross:top box:first" class="specification">
+					<span>规格</span> 
+					<span class="spec-item active">{$info.guige}</span>					
+				</div> 
+				<div class="go-buy"><a href="" class="buy">&nbsp; &nbsp; &nbsp; 立即购买&nbsp; &nbsp; &nbsp; </a></div>
+			</div>
+			<div class="clearfloat"></div>
+		</div>	
+	</section>
+	<section class="full gray">
+		<div class="p_content">
+			<div class="tabs-bar">
+				<div flex="cross:center" class="tabs">
+					<div class="active">产品介绍</div>
+				</div>
+			</div>
+			{$info.content}
+		</div>
+	</section>
+	<!--#include file="footer.html"-->
+	<!--#include file="script.html"-->
+</body>
+</html>
