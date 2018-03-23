@@ -34,9 +34,11 @@ a.rules:hover,a.process:hover,a.contact:hover {opacity:0.9;color: #fff;}
 .scene-img {padding-bottom:2rem;}
 .scene-img img {padding:1rem;}
 
-
-
-
+.faq_box {padding:2rem 4rem;}
+.faq_box h2 {font-size:2rem;}
+.faq {border-bottom:1px solid #f1f1f1; padding-bottom:3rem;}
+.faq h4 {margin:0; padding:2rem 0 0.5rem; font-size:1.5rem;}
+.faq p span {padding:0 0.2rem}
 
 
 
