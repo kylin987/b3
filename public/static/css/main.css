@@ -445,6 +445,7 @@ width: 3rem;}
 .tabs-bar .tabs .active {font-size: 1.6rem; font-weight: 700; height:4rem;    margin-right: 30px;}
 
 .tel {text-align:center; font-size:2.5rem; color:#666;}
+.recode {text-align:center;}
 
 
 @media only screen and (max-width: 50em) {
