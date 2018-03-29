@@ -55,13 +55,7 @@ $(function(){
         start();
     }
  
-    $elem.on('mouseover',function(){
-        isPause = true;
-    })
- 
-    $elem.on('mouseout',function(){
-        isPause = false;
-    });
+    
 });
 
 
