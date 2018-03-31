@@ -42,12 +42,11 @@
 }
 .owl-theme .owl-controls .owl-page span{
 	display: block;
-	width: 12px;
+	width: 32px;
 	height: 12px;
 	margin: 5px 7px;
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
-	border-radius: 20px;
 	background: #fff;
 
 	overflow: hidden;
@@ -55,7 +54,7 @@
 
 .owl-theme .owl-controls .owl-page.active span,
 .owl-theme .owl-controls.clickable .owl-page:hover span{
-	background: #46ebf3 !important;
+	background: #d1564b !important;
 }
 
 /* If PaginationNumbers is true */
